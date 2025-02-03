@@ -19,6 +19,11 @@ app.post('/data', (req: Request, res: Response): void => {
             message: 'Data received successfully',
         })
 });
+app.get("/home",TryCatch(
+    (req:Request,res:Response,next:NextFunction)=>{
+        res.send("Hello World from my backend")
+    }
+))
 app.get('/about',TryCatch(
     async(req:Request,res:Response,
         next:NextFunction)=>{
